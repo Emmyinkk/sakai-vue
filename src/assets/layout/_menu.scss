@@ -3,17 +3,18 @@
 .layout-sidebar {
     position: fixed;
     width: 20rem;
-    height: calc(100vh - 8rem);
+    height: 100vh;
     z-index: 999;
     overflow-y: auto;
     user-select: none;
-    top: 6rem;
-    left: 2rem;
+    top: 0;
+    left: 0rem;
     transition:
         transform var(--layout-section-transition-duration),
         left var(--layout-section-transition-duration);
-    background-color: var(--surface-overlay);
-    border-radius: var(--content-border-radius);
+    // background-color: var(--surface-overlay);
+    background: linear-gradient(5.05deg, #06A28E 19.11%, #2644F0 95.72%);
+    // border-radius: var(--content-border-radius);
     padding: 0.5rem 1.5rem;
 }
 
@@ -64,13 +65,15 @@
             align-items: center;
             position: relative;
             outline: 0 none;
-            color: var(--text-color);
+            // color: var(--text-color);
+            color: white;
             cursor: pointer;
             padding: 0.75rem 1rem;
             border-radius: var(--content-border-radius);
             transition:
                 background-color var(--element-transition-duration),
                 box-shadow var(--element-transition-duration);
+            margin-bottom: .75rem;
 
             .layout-menuitem-icon {
                 margin-right: 0.5rem;
@@ -84,11 +87,13 @@
 
             &.active-route {
                 font-weight: 700;
-                color: var(--primary-color);
+                color: white;
+                background-color: #0F161E;
             }
 
             &:hover {
-                background-color: var(--surface-hover);
+                // background-color: var(--surface-hover);
+                background-color: #0F161E;
             }
 
             &:focus {

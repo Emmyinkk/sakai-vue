@@ -14,6 +14,68 @@ const router = createRouter({
                     component: () => import('@/views/Dashboard.vue')
                 },
                 {
+                    path: '/gigs',
+                    name: 'gigs',
+                    component: () => import('@/views/Gigs.vue'),
+                    children: [
+                        {
+                            path: '',
+                            name: 'gig-posts',
+                            component: () => import('@/components/gigs/gigPostTable.vue')
+                        },
+                        {
+                            path: ':id',
+                            name: 'gig-details',
+                            component: () => import('@/components/gigs/gigDetails.vue'),
+                            props: true
+                        }
+                    ]
+                },
+                {
+                    path: '/platform',
+                    name: 'platform',
+                    component: () => import('@/views/Platform.vue')
+                },
+                {
+                    path: '/users',
+                    name: 'user',
+                    component: () => import('@/views/Users.vue'),
+                    children: [
+                        {
+                            path: '',
+                            name: 'all-users',
+                            component: () => import('@/views/users/allUsers.vue'),
+                        },
+                        {
+                            path: ':id',
+                            name: 'user-details',
+                            component: () => import('@/components/users/userDetails.vue'),
+                            props: true,
+                        },
+                        {
+                            path: '/talent/:id',
+                            name: 'talent-details',
+                            component: () => import('@/components/users/talentDetails.vue'),
+                            props: true,
+                        },
+                    ]
+                },
+                {
+                    path: '/notification',
+                    name: 'notification',
+                    component: () => import('@/views/subPages/Notification.vue')
+                },
+                {
+                    path: '/profile',
+                    name: 'profile',
+                    component: () => import('@/views/subPages/profile.vue')
+                },
+                {
+                    path: '/activities',
+                    name: 'activities',
+                    component: () => import('@/views/subPages/activities.vue')
+                },
+                {
                     path: '/uikit/formlayout',
                     name: 'formlayout',
                     component: () => import('@/views/uikit/FormLayout.vue')

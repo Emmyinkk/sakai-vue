@@ -4,10 +4,11 @@
     position: fixed;
     height: 4rem;
     z-index: 997;
-    left: 0;
+    left: 20rem;
     top: 0;
     width: 100%;
     padding: 0 2rem;
+    // padding-right: 20rem;
     background-color: var(--surface-card);
     transition: left var(--layout-section-transition-duration);
     display: flex;
@@ -16,7 +17,7 @@
     .layout-topbar-logo-container {
         width: 20rem;
         display: flex;
-        align-items: center;
+        align-items: start;
     }
 
     .layout-topbar-logo {
@@ -98,7 +99,10 @@
 
 @media (max-width: 991px) {
     .layout-topbar {
-        padding: 0 2rem;
+        padding: 0 1rem;
+        left: 0 !important;
+        padding-right: 1rem !important;
+        width: 100% !important;
 
         .layout-topbar-logo-container {
             width: auto;

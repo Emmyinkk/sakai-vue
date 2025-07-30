@@ -4,13 +4,45 @@ import { ref } from 'vue';
 import AppMenuItem from './AppMenuItem.vue';
 
 const model = ref([
+    // {
+    //     label: 'Logo',
+    //     items:[{Image}] 
+    // },
     {
-        label: 'Home',
-        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+        // label: 'Home',
+        items: [
+            { label: 'Dashboard', icon: 'pi pi-fw pi-th-large', to: '/' },
+            { label: 'Gigs', icon: 'ri-user-settings-line ri-lg', to: '/gigs' },
+            
+            { label: 'Platform', icon: 'pi pi-briefcase pi-fw', to: '/platform' },
+            {
+                label: 'Users',
+                icon: 'pi pi-fw pi-users',
+                items: [
+                    {
+                        label: 'User Quality Dashboard',
+                        icon: 'pi pi-fw pi-th-large',
+                        to: '/auth/login'
+                    },
+                    {
+                        label: 'Individual User Profile',
+                        icon: 'pi pi-fw pi-user',
+                        to: '/users'
+                    },
+                    {
+                        label: 'Verification & Approval',
+                        icon: 'pi pi-fw pi-lock',
+                        to: '/auth/access'
+                    }
+                ]
+            },
+            
+        ]
     },
     {
-        label: 'UI Components',
+        // label: 'UI Components',
         items: [
+            
             { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
             { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
             { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
@@ -29,7 +61,7 @@ const model = ref([
         ]
     },
     {
-        label: 'Pages',
+        // label: 'Pages',
         icon: 'pi pi-fw pi-briefcase',
         to: '/pages',
         items: [
@@ -77,7 +109,7 @@ const model = ref([
         ]
     },
     {
-        label: 'Hierarchy',
+        // label: 'Hierarchy',
         items: [
             {
                 label: 'Submenu 1',
@@ -121,7 +153,7 @@ const model = ref([
         ]
     },
     {
-        label: 'Get Started',
+        // label: 'Get Started',
         items: [
             {
                 label: 'Documentation',
